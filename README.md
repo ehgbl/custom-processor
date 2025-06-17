@@ -1,2 +1,2 @@
-# 8bit-processor-vhdl
+# custom-processor
 
