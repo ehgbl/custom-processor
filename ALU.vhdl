@@ -37,4 +37,4 @@ begin
     result <= temp_result;
     
     zero <= '1' when temp_result = conv_std_logic_vector(0, m) else '0';
-    
+end behavior;

@@ -4,15 +4,15 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 use work.main_paras.all;
 
-entity inpu_select is
+entity input_select is
     port (IN0,IN1,IN2,IN3,IN4,IN5,IN6,IN7: in std_logic_vector(m-1 downto 0);
         A, result: in std_logic_vector(m-1 downto 0);
         j: in std_logic_vector(2 downto 0);
         input_control: in std_logic_vector(1 downto 0);
         to_reg: out std_logic_vector(m-1 downto 0)
     );
-end inpu_select;
-architecture behavior of inpu_select is
+end input_select;
+architecture input_select_arch of input_select is
     signal temp_result: std_logic_vector(m-1 downto 0);
 begin
     -- Combinational input selection process
@@ -39,4 +39,4 @@ begin
             when others => to_reg <= (others => '0'); -- Default to zero
         end case;
     end process;
-end input_selection_arch;
+end input_select_arch;
